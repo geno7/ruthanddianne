@@ -1,0 +1,36 @@
+{
+    "name": "ruthanddianne",
+    "version": "1.0.0",
+    "description": "homepage for ruth and dianne webcomic",
+    "main": "index.js",
+    "scripts": {
+        "lite": "lite-server",
+        "scss": "node-sass -o ./public/css/ ./public/css/",
+        "start": "npm run watch:all",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "watch:scss": "onchange \"./public/css/*.scss\" -- npm run scss",
+        "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
+        "build": ""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/geno7/ruthanddianne.git"
+    },
+    "author": "geno7",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/geno7/ruthanddianne/issues"
+    },
+    "homepage": "https://github.com/geno7/ruthanddianne#readme",
+    "devDependencies": {
+        "lite-server": "^2.6.1",
+        "node-sass": "^6.0.1",
+        "parallelshell": "^3.0.1"
+    },
+    "dependencies": {
+        "bootstrap": "^5.1.0",
+        "jquery": "^3.6.0",
+        "onchange": "^7.1.0",
+        "popper.js": "^1.16.1"
+    }
+}
