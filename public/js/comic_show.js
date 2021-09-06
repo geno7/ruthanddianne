@@ -27,7 +27,11 @@ function writePageTitle(toggleNum,char) { //display title of current page
 }
 
 function writeAuthorNotes() { //display author notes
-  return document.write(pgData[pg-1].authorNotes);
+  return document.write(`
+    <h2><span>` + pgData[pg - 1].title.toUpperCase() +`</span></h2>
+    <h4><span>` + pgData[pg - 1].date +`</span></h4>
+    <span>` + pgData[pg - 1].authorNotes + `</span>
+    `);
 }
 
 //function used to split pages into multiple images if needed, and add alt text
@@ -79,51 +83,98 @@ console.log("nav image file extension - " + navExt);
 function imgOrText(setImg,navTextSet) { //function that writes the indicated nav button as either an image or text
 
   if (setImg) { //if its an image
-    return `<img src="` + navFolder + `/nav_` + navText[navTextSet].toLowerCase() + `.` + navExt + `" alt="` + navText[navTextSet] + `" />`;
+    return `
+      <div class="switchimg">
+        <img src="` + navFolder + `/nav_` + navText[navTextSet].toLowerCase() + `.` + navExt + `" alt="` + navText[navTextSet] + `"/>
+        <img src="` + navFolder + `/nav_` + navText[navTextSet].toLowerCase() + `_pressed.` + navExt + `" alt="` + navText[navTextSet] + `" class="img-top"/>
+      </div>`;
   } else {
     return navText[navTextSet];
   }
 }
 
-function writeNav(imageToggle) { //this is a function that writes both the top and bottom nav buttons
+function writeNav(imageToggle) {
+    //this is a function that writes both the top and bottom nav buttons
+  
+    document.write(`<div id="comicNav" class="justify-content-center position-absolute">`); //opening div tag, give nav a class so it can be easily styled.
 
-  document.write(`<div class=comicNav>`) //opening div tag, give nav a class so it can be easily styled.
+    document.write(`<div  class="navBorder"><img src="` + navFolder + `/nav_borderl.png` + `"/></div>`); //insert leftnav button border (edge of tape recorder)
 
-  //FIRST BUTTON
-  if (pg > 1) { //wait until page 2 to make button active
-  document.write(`<a href="?pg=` + 1 + navScrollTo + `"/>` + imgOrText(imageToggle,0) + `</a>`);
-  } else {
-  if (!imageToggle) {document.write(imgOrText(imageToggle,0))};
-  }
+    document.write(
+        `<a href="about.html">
+    <div class="switchimg">
+        <img src="` +
+            navFolder +
+            `/nav_meet.png"/>
+        <img src="` +
+            navFolder +
+            `/nav_meet_pressed.png" class="img-top"/>
+    </div></a>`
+    );
 
-  if (!imageToggle) {document.write(` | `);} //divider
+    //FIRST BUTTON
+    if (pg > 1) {
+        //wait until page 2 to make button active
+        document.write(`<a href="?pg=` + 1 + navScrollTo + `"/>` + imgOrText(imageToggle, 0) + `</a>`);
+    } else {
+        if (!imageToggle) {
+            document.write(imgOrText(imageToggle, 0));
+        }
+    }
 
-  //PREV BUTTON
-  if (pg > 1) { //wait until page 2 to make button active
-  document.write(`<a href="?pg=` + (pg - 1) + navScrollTo + `"/>` + imgOrText(imageToggle,1) + `</a>`);
-  } else {
-  if (!imageToggle) {document.write(imgOrText(imageToggle,1))};
-  }
+    if (!imageToggle) {
+        document.write(` | `);
+    } //divider
 
-  if (!imageToggle) {document.write(` | `);} //divider
+    //PREV BUTTON
+    if (pg > 1) {
+        //wait until page 2 to make button active
+        document.write(`<a href="?pg=` + (pg - 1) + navScrollTo + `"/>` + imgOrText(imageToggle, 1) + `</a>`);
+    } else {
+        if (!imageToggle) {
+            document.write(imgOrText(imageToggle, 1));
+        }
+    }
 
-  //NEXT BUTTON
-  if (pg < maxpg) { //only make active if not on the last page
-    document.write(`<a href="?pg=` + (pg + 1) + navScrollTo + `"/>` + imgOrText(imageToggle,2) + `</a>`);
-  } else {
-  if (!imageToggle) {document.write(imgOrText(imageToggle,2))};
-  }
+    if (!imageToggle) {
+        document.write(` | `);
+    } //divider
 
-  if (!imageToggle) {document.write(` | `);} //divider
+    //NEXT BUTTON
+    if (pg < maxpg) {
+        //only make active if not on the last page
+        document.write(`<a href="?pg=` + (pg + 1) + navScrollTo + `"/>` + imgOrText(imageToggle, 2) + `</a>`);
+    } else {
+        if (!imageToggle) {
+            document.write(imgOrText(imageToggle, 2));
+        }
+    }
 
-  //LAST BUTTON
-  if (pg < maxpg) { //only make active if not on last page
-  document.write(`<a href="?pg=` + maxpg + navScrollTo + `"/>` + imgOrText(imageToggle,3) + `</a>`);
-  } else {
-  if (!imageToggle) {document.write(imgOrText(imageToggle,3))};
-  }
+    if (!imageToggle) {
+        document.write(` | `);
+    } //divider
 
-  document.write(`</div>`) //closing div tag
+    //LAST BUTTON
+    if (pg < maxpg) {
+        //only make active if not on last page
+        document.write(`<a href="?pg=` + maxpg + navScrollTo + `"/>` + imgOrText(imageToggle, 3) + `</a>`);
+    } else {
+        if (!imageToggle) {
+            document.write(imgOrText(imageToggle, 3));
+        }
+    }
+
+    document.write(
+    `<a href="archive.html">
+    <div class="switchimg">
+        <img src="` + navFolder + `/nav_archive.png" />
+        <img src="` + navFolder + `/nav_archive_pressed.png" class="img-top"/>
+    </div></a>`
+    );
+
+    document.write(`<div class="navBorder"><img src="` + navFolder + `/nav_borderr.png` + `"/></div>`); //insert right nav button border (edge of tape recorder)
+
+    document.write(`</div>`); //closing div tag
 }
 
 //KEYBOARD NAVIGATION

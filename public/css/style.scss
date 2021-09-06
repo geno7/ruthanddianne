@@ -3,22 +3,73 @@ $color-black: #000;
 $color-highlight: #DA5437;
 $color-white: #fff;
 
+$bg-black: url("../img/subpage/bg.png");
+$bg-white: url("../img/subpage/bg_white.png");
+
+//give a parallax bg to a div
+@mixin parallax-bg($bg-url) {
+    color: white;
+    background-image: $bg-url;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 body, div, main, section, article {
   box-sizing: border-box;
 }
 
-/* universal background color */
-
+/* background image */
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg.png");
     background-size: 100%;
     background-attachment: fixed;
+    color: $color-black;
 }
 
-/* header image */
-header img {
-  width: 500px;
-  max-width: 98%;
+
+
+/* HEADER */
+header {
+
+    @include parallax-bg(url("../img/header/bg.png"));
+
+    #headerLogo {
+        --bs-gutter-x: 0;
+    }
+
+    #headerLogo {
+        img {
+            width: 500px;
+            max-width: 100%;
+            max-height: 98%;
+        }
+    }
+
+    #headerDianne {
+        img {
+            width: 271px;
+            max-width: 100%;
+            max-height: 98%;
+        }
+    }
+
+    #headerRuth {
+        img {
+            width: 271px;
+            max-width: 100%;
+            max-height: 98%;
+        }
+    }
+
+    #nav {
+    background-color: $color-white;
+    outline: 3px solid $color-black;
+    font-size: 20px;
+    width: 100%;
+    margin: auto;
+    }
 }
 
 /* clearfix hack to prevent image overflow. check out the W3Schools page on it. */
@@ -37,13 +88,19 @@ header img {
 
 /* header font */
 #showComic, header, h1, h2, h3, h4, h5 {
-  font-family: EckScript, cursive;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: $color-black;
 }
 
-/* body font */
-.subPage p, footer, #authorNotes, .archiveTable {
-  font-family: EckScript, sans-serif;
+//paragraph font
+.archiveTable, #authorNotes {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
   font-size: large;
+  span {
+    background-image: $bg-white;
+    }
 }
 
 /* STYLING FOR SUBPAGES (about, characters, etc) */
@@ -53,11 +110,25 @@ header img {
 .subPage {
   width: 900px;
   max-width: 98%;
-  background-color: $color-white;
+  background-image: $bg-black;
+  background-repeat:repeat;
+  background-blend-mode: overlay;
   outline: 3px solid $color-black;
   margin: auto;
   margin-bottom: 10px;
+  margin-top: 40px;
   padding: 0px 12px 12px;
+}
+
+#archiveHeader {
+  img {
+  max-width:98%;
+  width: 300px;
+  }
+}
+
+.blend {
+  mix-blend-mode: overlay;
 }
 
 .subPage:not(.archivePage) {
@@ -92,45 +163,62 @@ a:hover {
       color: $color-highlight;
     }
 
-/* HEADER */
-header #nav {
-  background-color: $color-white;
-  outline: 3px solid $color-black;
-  font-size: 20px;
-  width: 98%;
-  margin: auto;
-}
-
 /* HOMEPAGE */
 
 /* style nav button images */
-.comicNav {
+#comicNav {
   display:flex;
   flex-wrap:nowrap;
-  align-items: center;
-  justify-content: center;
-}
-.comicNav img {
-  width: 80px;
-  max-width: 98%;
-  padding-right: 30px;
+  transition: 0.2s;
+  width: 100%;
+  background-image: $bg-black;
+  //background-color: $color-black;
+  height: 70px;
+
+  img {
+    //width: 60px;
+    max-width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .navBorder {
+    img {height: 100%;}
+  }
+
+  
 }
 
 /* style comic page image */
-.comicPage img {
-  width: 900px;
-  max-width: 98%;
+.comicPage {
+    img {
+    max-width: 100%;
+    }
+}
+
+/*style area where comic images are (comicPages id might be easy to confuse with comicPage class oops)*/
+#comicPages {
+    outline: 4px solid $color-black;
+
+    //width: 900px;
+    //max-width: 98%;
+
+    margin-top: 100px;
+
+    --bs-gutter-x: 0;
+
+    //width: 60vw;
 }
 
 /* style author notes */
 #authorNotes {
-  background-color:$color-white;
+  background: $bg-black;
   outline: 3px solid $color-black;
-  margin: auto;
+  //margin: auto;
   padding: 3px;
   padding-top: 0px;
-  width: 900px;
-  max-width: 98%;
+  --bs-gutter-x: 0;
 }
 
 /* ARCHIVE PAGE */
@@ -154,12 +242,19 @@ header #nav {
 
 /* FOOTER */
 footer {
-  color: $color-white;
+  color: $color-black;
   margin-top: 12px;
   margin-bottom: 15px;
   float: left;
   width: 100%;
-  font-size: 12px;
+
+  //font  
+  font-family: 'Courier New', Courier, monospace;
+  font-size: small;
+
+  span {
+    background-image: $bg-white;
+  }
 }
 
 footer p {
@@ -177,4 +272,35 @@ footer a:hover {
 /* take away margins from the edges of the screen */
 html, body {
   margin: 0;
+}
+
+//make an image that changes when you hover over it
+.switchimg {
+        position: relative;
+        display: inline-block;
+
+    .img-top {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+    }
+}
+.switchimg:hover {
+    .img-top {
+        display: inline;
+    }
+}
+
+//image get bigger when you hover
+.imglink {
+  img {
+    transition: 0.2s;
+  }
+  img:hover {
+  -webkit-transform: scale(1.01);
+  transform: scale(1.2);
+  cursor: inherit;
+  }
 }

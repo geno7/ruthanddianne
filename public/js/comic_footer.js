@@ -1,8 +1,17 @@
 document.write(`
-    <footer align="center">
-        <p>Here's a footer where you can put copyright information and stuff.</p>
-        <p>There's also a link back to Rarebit. It's ultimately your choice whether to delete it or not but it'd be cool of you to keep it there and spread the word...</p> 
-        <p><strong>Powered by</strong></p>
-        <a href="https://rarebit.neocities.org"><img src="img/rarebitlogo_small.png" height = "30" /></a>
+    <footer>
+        <div class="container-fluid">
+            <div class="row d-flex-justify-content-center text-center lh-1">
+                <div class="col-12">
+                    <p><span><strong>2021</strong></span></p>
+                    <p><span><strong>"Ruth and Dianne are Starting a Band" is by Geno7, site also designed and coded by Geno7</strong></span></p>
+                </div>
+                <div class="col-12">
+                    <h5><span>POWERED BY</span></h5>
+                    <a href="https://rarebit.neocities.org" class="imglink"><img src="img/rarebitlogo_small.png" height = "30"/></a>
+                </div>
+            </div>
+            
+        </div>
     </footer>
 `);

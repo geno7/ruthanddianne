@@ -1,16 +1,41 @@
 body, div, main, section, article {
   box-sizing: border-box; }
 
-/* universal background color */
+/* background image */
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg.png");
   background-size: 100%;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  color: #000; }
 
-/* header image */
-header img {
-  width: 500px;
-  max-width: 98%; }
+/* HEADER */
+header {
+  color: white;
+  background-image: url("../img/header/bg.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  header #headerLogo {
+    --bs-gutter-x: 0; }
+  header #headerLogo img {
+    width: 500px;
+    max-width: 100%;
+    max-height: 98%; }
+  header #headerDianne img {
+    width: 271px;
+    max-width: 100%;
+    max-height: 98%; }
+  header #headerRuth img {
+    width: 271px;
+    max-width: 100%;
+    max-height: 98%; }
+  header #nav {
+    background-color: #fff;
+    outline: 3px solid #000;
+    font-size: 20px;
+    width: 100%;
+    margin: auto; }
 
 /* clearfix hack to prevent image overflow. check out the W3Schools page on it. */
 .clearfix::after {
@@ -25,23 +50,37 @@ header img {
 
 /* header font */
 #showComic, header, h1, h2, h3, h4, h5 {
-  font-family: EckScript, cursive; }
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #000; }
 
-/* body font */
-.subPage p, footer, #authorNotes, .archiveTable {
-  font-family: EckScript, sans-serif;
+.archiveTable, #authorNotes {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
   font-size: large; }
+  .archiveTable span, #authorNotes span {
+    background-image: url("../img/subpage/bg_white.png"); }
 
 /* STYLING FOR SUBPAGES (about, characters, etc) */
 /*general*/
 .subPage {
   width: 900px;
   max-width: 98%;
-  background-color: #fff;
+  background-image: url("../img/subpage/bg.png");
+  background-repeat: repeat;
+  background-blend-mode: overlay;
   outline: 3px solid #000;
   margin: auto;
   margin-bottom: 10px;
+  margin-top: 40px;
   padding: 0px 12px 12px; }
+
+#archiveHeader img {
+  max-width: 98%;
+  width: 300px; }
+
+.blend {
+  mix-blend-mode: overlay; }
 
 .subPage:not(.archivePage) {
   text-align: center; }
@@ -69,41 +108,40 @@ a {
 a:hover {
   color: #DA5437; }
 
-/* HEADER */
-header #nav {
-  background-color: #fff;
-  outline: 3px solid #000;
-  font-size: 20px;
-  width: 98%;
-  margin: auto; }
-
 /* HOMEPAGE */
 /* style nav button images */
-.comicNav {
+#comicNav {
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center; }
-
-.comicNav img {
-  width: 80px;
-  max-width: 98%;
-  padding-right: 30px; }
+  transition: 0.2s;
+  width: 100%;
+  background-image: url("../img/subpage/bg.png");
+  height: 70px; }
+  #comicNav img {
+    max-width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px; }
+  #comicNav .navBorder img {
+    height: 100%; }
 
 /* style comic page image */
 .comicPage img {
-  width: 900px;
-  max-width: 98%; }
+  max-width: 100%; }
+
+/*style area where comic images are (comicPages id might be easy to confuse with comicPage class oops)*/
+#comicPages {
+  outline: 4px solid #000;
+  margin-top: 100px;
+  --bs-gutter-x: 0; }
 
 /* style author notes */
 #authorNotes {
-  background-color: #fff;
+  background: url("../img/subpage/bg.png");
   outline: 3px solid #000;
-  margin: auto;
   padding: 3px;
   padding-top: 0px;
-  width: 900px;
-  max-width: 98%; }
+  --bs-gutter-x: 0; }
 
 /* ARCHIVE PAGE */
 /* style table in which archive is displayed */
@@ -122,12 +160,15 @@ header #nav {
 
 /* FOOTER */
 footer {
-  color: #fff;
+  color: #000;
   margin-top: 12px;
   margin-bottom: 15px;
   float: left;
   width: 100%;
-  font-size: 12px; }
+  font-family: 'Courier New', Courier, monospace;
+  font-size: small; }
+  footer span {
+    background-image: url("../img/subpage/bg_white.png"); }
 
 footer p {
   margin: auto; }
@@ -141,3 +182,24 @@ footer a:hover {
 /* take away margins from the edges of the screen */
 html, body {
   margin: 0; }
+
+.switchimg {
+  position: relative;
+  display: inline-block; }
+  .switchimg .img-top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99; }
+
+.switchimg:hover .img-top {
+  display: inline; }
+
+.imglink img {
+  transition: 0.2s; }
+
+.imglink img:hover {
+  -webkit-transform: scale(1.01);
+  transform: scale(1.2);
+  cursor: inherit; }

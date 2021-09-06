@@ -5,7 +5,7 @@
 function writeArchive(divId,min,max,reverseOrder) {
     //create a table to put the archive data
     let archiveTable = document.createElement("TABLE");
-    archiveTable.setAttribute("class", "archiveTable"); //set class to archiveTable for css styling
+    archiveTable.setAttribute("class", "archiveTable table table-responsive table-borderless"); //set class to archiveTable for css styling
     let getDiv = document.getElementById(divId);
     getDiv.appendChild(archiveTable);
     //make the table from the currently available comics
@@ -21,10 +21,10 @@ function writeArchive(divId,min,max,reverseOrder) {
             if (pgData[i-1].date) {pgDate = pgData[i-1].date;}
         }
 
-        cellTitle.innerHTML = `<a href="`+ indexPage + `?pg=` + i + navScrollTo + `">` + pgTitle +`</a>`;
-        cellTitle.setAttribute("class", "archiveCellTitle");
-        cellDate.innerHTML = pgDate;
-        cellDate.setAttribute("class", "archiveCellDate");
+        cellTitle.innerHTML = `<span> <a href="`+ indexPage + `?pg=` + i + navScrollTo + `"><strong>` + pgTitle +`</strong></a> </span>`;
+        cellTitle.setAttribute("class", "archiveCellTitle lh-1 py-2");
+        cellDate.innerHTML = "<span> " + pgDate + " </span>";
+        cellDate.setAttribute("class", "archiveCellDate lh-1 py-2 text-end");
         console.log(i + " created row - " + pgTitle);
         
     };

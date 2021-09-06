@@ -15,7 +15,7 @@ const maxpg = 17; //the current number of pages your comic has in total. this DO
 // COMIC PAGE SETTINGS
 const folder = "img/comics"; //directory of the folder where you keep all the comics
 const image = "strip"; //what you'll name all your comic pages
-const imgPart = " pg" //special character(s) you put after the page number to subdivide pages into multiple image files (ie pg2_1, pg2_2, etc)
+const imgPart = " pg"; //special character(s) you put after the page number to subdivide pages into multiple image files (ie pg2_1, pg2_2, etc)
 const ext = "png"; //file extension of your comic pages
 
 //NAVIGATION SETTINGS
@@ -42,10 +42,10 @@ const pgData = [
     {
         pgNum: 1, //what page number it is
         title: "Starting A Band", //the title of the page (leaving this blank will default it to "Page X")
-        date: "April 16, 2021", //the date on which the page was posted (mainly for the archive)
+        date: "Apr 16, 2021", //the date on which the page was posted (mainly for the archive)
         altText: "", //the alt text (mouse over text) for this particular comic. put nothing inbetween the quotes for no alt text
         imageFiles: 3, //how many image files this page is split into
-        authorNotes: ``,
+        authorNotes: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis enim ut lacus viverra, nec egestas libero cursus. Aliquam blandit diam ante, at gravida augue porta a. Etiam fringilla leo vitae elit viverra fringilla. Mauris vehicula, erat cursus volutpat fringilla, neque urna sodales massa, viverra luctus ante erat ut nisi. Duis ultricies arcu mattis finibus congue. Maecenas interdum, tellus in eleifend pellentesque, leo velit euismod enim, pretium faucibus velit ante ut dui. Fusce sed nulla dapibus eros tristique efficitur a vitae magna. Donec dignissim dolor eget auctor facilisis. Duis aliquam est lacinia convallis tempor. Integer nec erat egestas, eleifend tortor at, sodales sapien. Nulla facilisi. Aliquam et ligula nec mi egestas aliquet. Donec sed finibus risus. Donec ullamcorper luctus nisl pretium suscipit. Sed ipsum velit, posuere ac euismod vel, faucibus quis ante. Pellentesque commodo lobortis diam ac fringilla.`,
     },
     {
         pgNum: 2,
@@ -141,7 +141,7 @@ const pgData = [
         date: "Jul 13, 2020",
         altText: "",
         imageFiles: 2,
-        authorNotes: ``,
+        authorNotes: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis enim ut lacus viverra, nec egestas libero cursus. Aliquam blandit diam ante, at gravida augue porta a. Etiam fringilla leo vitae elit viverra fringilla. Mauris vehicula, erat cursus volutpat fringilla, neque urna sodales massa, viverra luctus ante erat ut nisi. Duis ultricies arcu mattis finibus congue. Maecenas interdum, tellus in eleifend pellentesque, leo velit euismod enim, pretium faucibus velit ante ut dui. Fusce sed nulla dapibus eros tristique efficitur a vitae magna. Donec dignissim dolor eget auctor facilisis. Duis aliquam est lacinia convallis tempor. Integer nec erat egestas, eleifend tortor at, sodales sapien. Nulla facilisi. Aliquam et ligula nec mi egestas aliquet. Donec sed finibus risus. Donec ullamcorper luctus nisl pretium suscipit. Sed ipsum velit, posuere ac euismod vel, faucibus quis ante. Pellentesque commodo lobortis diam ac fringilla.`,
     },
     {
         pgNum: 14,
