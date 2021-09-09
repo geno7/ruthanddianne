@@ -20,6 +20,10 @@ body, div, main, section, article {
   box-sizing: border-box;
 }
 
+html { //smooth scroll
+  scroll-behavior: smooth;
+}
+
 /* background image */
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg.png");
@@ -97,7 +101,7 @@ header {
 .archiveTable, #authorNotes {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
-  font-size: large;
+  font-size: 20px;
   span {
     background-image: $bg-white;
     }
@@ -125,6 +129,18 @@ header {
   max-width:98%;
   width: 300px;
   }
+}
+
+.archiveRow {
+  transition: 0.2s;
+}
+
+.archiveRow:hover {
+  background-image: $bg-white;
+  outline: none;
+  cursor: pointer;
+  -webkit-transform: scale(1.01);
+  transform: scale(1.05);
 }
 
 .blend {
@@ -235,6 +251,15 @@ a:hover {
   text-align: left;
 }
 
+/*style archive thumbnail*/
+.archiveCellThumb {
+  img{
+    max-width: 100%;
+  }
+    width: 500px;
+    max-width: 100px;
+}
+
 /* style table cell in which page title is displayed */
 .archiveCellTitle {
   max-width: 300px;
@@ -300,7 +325,7 @@ html, body {
   }
   img:hover {
   -webkit-transform: scale(1.01);
-  transform: scale(1.2);
+  transform: scale(1.05);
   cursor: inherit;
   }
 }

@@ -1,6 +1,9 @@
 body, div, main, section, article {
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 /* background image */
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg.png");
@@ -57,7 +60,7 @@ header {
 .archiveTable, #authorNotes {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
-  font-size: large; }
+  font-size: 20px; }
   .archiveTable span, #authorNotes span {
     background-image: url("../img/subpage/bg_white.png"); }
 
@@ -78,6 +81,16 @@ header {
 #archiveHeader img {
   max-width: 98%;
   width: 300px; }
+
+.archiveRow {
+  transition: 0.2s; }
+
+.archiveRow:hover {
+  background-image: url("../img/subpage/bg_white.png");
+  outline: none;
+  cursor: pointer;
+  -webkit-transform: scale(1.01);
+  transform: scale(1.05); }
 
 .blend {
   mix-blend-mode: overlay; }
@@ -154,6 +167,13 @@ a:hover {
   vertical-align: top;
   text-align: left; }
 
+/*style archive thumbnail*/
+.archiveCellThumb {
+  width: 500px;
+  max-width: 100px; }
+  .archiveCellThumb img {
+    max-width: 100%; }
+
 /* style table cell in which page title is displayed */
 .archiveCellTitle {
   max-width: 300px; }
@@ -201,5 +221,5 @@ html, body {
 
 .imglink img:hover {
   -webkit-transform: scale(1.01);
-  transform: scale(1.2);
+  transform: scale(1.05);
   cursor: inherit; }

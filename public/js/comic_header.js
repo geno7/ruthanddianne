@@ -10,7 +10,7 @@ document.write(`
                         <img src="./img/header/ruth_pressed.png" class="img-top"/>
                     </div>
                 </div>
-                <div class="col-6 d-flex align-items-center justify-content-center" id="headerLogo"><a href="index.html"><img src="./img/header/logo.png" alt="" /></a></div>
+                <div class="col-6 d-flex align-items-center justify-content-center" id="headerLogo"><a href="index.html" class="imglink"><img src="./img/header/logo.png" alt="You're reading it!"/></a></div>
 
                 <div class="col-3 d-flex align-items-center justify-content-center" id="headerDianne">
                     <div class="switchimg">
