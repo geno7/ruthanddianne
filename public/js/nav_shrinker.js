@@ -15,6 +15,41 @@ window.onscroll = function () {
 
 const cNav = document.getElementById("comicNav");
 
+// let mouseIsOver = false;
+
+// if (mouseIsOver === true) {
+//     console.log("mouseover - " + mouseIsOver);
+//     if (screen.width < 767.98) {
+//         cNav.style.height = "70px";
+//     } else {
+//         cNav.style.height = "100px";
+//     }
+// } else {
+//     console.log("mouseover - " + mouseIsOver);
+//     if (screen.width > 767.98) {
+//         cNav.style.height = "50px";
+//     }
+// }
+
+//enlarge on mouse over
+cNav.addEventListener("mouseenter", function () {
+    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+        if (screen.width < 767.98) {
+            cNav.style.height = "70px";
+        } else {
+            cNav.style.height = "100px";
+        }
+    }
+});
+
+cNav.addEventListener("mouseleave", function () {
+    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+        if (screen.width > 767.98) {
+            cNav.style.height = "50px";
+        }
+    }
+});
+
 function navShrinker() {
     if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
         if (screen.width > 767.98) {

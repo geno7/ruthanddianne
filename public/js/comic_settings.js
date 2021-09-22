@@ -47,7 +47,7 @@ const pgData = [
     {
         pgNum: 1, //what page number it is
         title: "Starting A Band", //the title of the page (leaving this blank will default it to "Page X")
-        date: "Apr 16, 2021", //the date on which the page was posted (mainly for the archive)
+        date: "Apr 16, 2020", //the date on which the page was posted (mainly for the archive)
         altText: "", //the alt text (mouse over text) for this particular comic. put nothing inbetween the quotes for no alt text
         imageFiles: 3, //how many image files this page is split into
         authorNotes: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis enim ut lacus viverra, nec egestas libero cursus. Aliquam blandit diam ante, at gravida augue porta a. Etiam fringilla leo vitae elit viverra fringilla. Mauris vehicula, erat cursus volutpat fringilla, neque urna sodales massa, viverra luctus ante erat ut nisi. Duis ultricies arcu mattis finibus congue. Maecenas interdum, tellus in eleifend pellentesque, leo velit euismod enim, pretium faucibus velit ante ut dui. Fusce sed nulla dapibus eros tristique efficitur a vitae magna. Donec dignissim dolor eget auctor facilisis. Duis aliquam est lacinia convallis tempor. Integer nec erat egestas, eleifend tortor at, sodales sapien. Nulla facilisi. Aliquam et ligula nec mi egestas aliquet. Donec sed finibus risus. Donec ullamcorper luctus nisl pretium suscipit. Sed ipsum velit, posuere ac euismod vel, faucibus quis ante. Pellentesque commodo lobortis diam ac fringilla.`,
@@ -55,7 +55,7 @@ const pgData = [
     {
         pgNum: 2,
         title: "Showing Each Other Music",
-        date: "Apr 16, 2021",
+        date: "Apr 16, 2020",
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -63,7 +63,7 @@ const pgData = [
     {
         pgNum: 3,
         title: "Naming Their Band",
-        date: "Mar 18, 2021",
+        date: "Mar 18, 2020",
         altText: "",
         imageFiles: 2,
         authorNotes: ``,

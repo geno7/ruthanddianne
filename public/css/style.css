@@ -2,7 +2,7 @@ body, div, main, section, article {
   box-sizing: border-box; }
 
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: auto !important; }
 
 /* background image */
 body {
@@ -64,10 +64,23 @@ header {
   .archiveTable span, #authorNotes span {
     background-image: url("../img/subpage/bg_white.png"); }
 
+.subPage span {
+  background-image: url("../img/subpage/bg_white.png"); }
+
+.subPage p {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-size: 20px; }
+
+.subPage h1, .subPage h2, .subPage h3, .subPage h4, .subPage h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #000; }
+
 /* STYLING FOR SUBPAGES (about, characters, etc) */
 /*general*/
 .subPage {
-  width: 900px;
+  width: 1000px;
   max-width: 98%;
   background-image: url("../img/subpage/bg.png");
   background-repeat: repeat;
@@ -77,6 +90,37 @@ header {
   margin-bottom: 10px;
   margin-top: 40px;
   padding: 0px 12px 12px; }
+
+.subPageNav {
+  background-image: url("../img/subpage/bg.png");
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-size: 20px;
+  max-width: 100%; }
+  .subPageNav .subPageNavItems span {
+    background-image: url("../img/subpage/bg_white.png"); }
+
+/* ARCHIVE PAGE */
+/* style table in which archive is displayed */
+.archiveTable {
+  max-width: 98%; }
+
+/* style archive table cells */
+.archiveTable td {
+  padding: 3px;
+  vertical-align: top;
+  text-align: left; }
+
+/*style archive thumbnail*/
+.archiveCellThumb {
+  width: 500px;
+  max-width: 100px; }
+  .archiveCellThumb img {
+    max-width: 100%; }
+
+/* style table cell in which page title is displayed */
+.archiveCellTitle {
+  max-width: 300px; }
 
 #archiveHeader img {
   max-width: 98%;
@@ -98,6 +142,10 @@ header {
 .subPage:not(.archivePage) {
   text-align: center; }
 
+/*CHARACTER PAGE*/
+.charPage .charProfile .charImg img {
+  width: 100%; }
+
 /* for pictures displayed to the left */
 .leftPic {
   clear: left;
@@ -110,16 +158,12 @@ header {
   float: left;
   margin-left: 20px; }
 
-/* specific to Characters */
-.charTable, .charTable td {
-  width: 100%; }
-
 /* link colors */
 a {
   color: #000; }
 
 a:hover {
-  color: #DA5437; }
+  color: #fff; }
 
 /* HOMEPAGE */
 /* style nav button images */
@@ -155,28 +199,6 @@ a:hover {
   padding: 3px;
   padding-top: 0px;
   --bs-gutter-x: 0; }
-
-/* ARCHIVE PAGE */
-/* style table in which archive is displayed */
-.archiveTable {
-  max-width: 98%; }
-
-/* style archive table cells */
-.archiveTable td {
-  padding: 3px;
-  vertical-align: top;
-  text-align: left; }
-
-/*style archive thumbnail*/
-.archiveCellThumb {
-  width: 500px;
-  max-width: 100px; }
-  .archiveCellThumb img {
-    max-width: 100%; }
-
-/* style table cell in which page title is displayed */
-.archiveCellTitle {
-  max-width: 300px; }
 
 /* FOOTER */
 footer {

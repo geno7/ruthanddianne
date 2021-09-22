@@ -80,28 +80,49 @@ console.log("alt text - " + `"` + pgData[pg - 1].altText + `"`);
 console.log("nav text - " + navText);
 console.log("nav image file extension - " + navExt);
 
-function imgOrText(setImg,navTextSet) { //function that writes the indicated nav button as either an image or text
+function imgOrText(setImg, navTextSet) {
+    //function that writes the indicated nav button as either an image or text
 
-  if (setImg) { //if its an image
-    return `
-      <div class="switchimg">
-        <img src="` + navFolder + `/nav_` + navText[navTextSet].toLowerCase() + `.` + navExt + `" alt="` + navText[navTextSet] + `"/>
-        <img src="` + navFolder + `/nav_` + navText[navTextSet].toLowerCase() + `_pressed.` + navExt + `" alt="` + navText[navTextSet] + `" class="img-top"/>
-      </div>`;
-  } else {
-    return navText[navTextSet];
-  }
+    if (setImg) {
+        //if its an image
+        return (
+            `
+        <div class="switchimg">
+        <img src="` +
+            navFolder +
+            `/nav_` +
+            navText[navTextSet].toLowerCase() +
+            `.` +
+            navExt +
+            `" alt="` +
+            navText[navTextSet] +
+            `"/>
+        <img src="` +
+            navFolder +
+            `/nav_` +
+            navText[navTextSet].toLowerCase() +
+            `_pressed.` +
+            navExt +
+            `" alt="` +
+            navText[navTextSet] +
+            `" class="img-top"/>
+        </div>`
+        );
+    } else {
+        return navText[navTextSet];
+    }
 }
 
 function writeNav(imageToggle) {
     //this is a function that writes both the top and bottom nav buttons
-  
+
     document.write(`<div id="comicNav" class="justify-content-center position-absolute">`); //opening div tag, give nav a class so it can be easily styled.
 
     document.write(`<div  class="navBorder"><img src="` + navFolder + `/nav_borderl.png` + `"/></div>`); //insert leftnav button border (edge of tape recorder)
 
+    //MEET THE BAND BUTTON
     document.write(
-        `<a href="about.html">
+        `<a href="characters.html">
     <div class="switchimg">
         <img src="` +
             navFolder +
@@ -164,11 +185,16 @@ function writeNav(imageToggle) {
         }
     }
 
+    //ARCHIVE BUTTON
     document.write(
-    `<a href="archive.html">
+        `<a href="archive.html">
     <div class="switchimg">
-        <img src="` + navFolder + `/nav_archive.png" />
-        <img src="` + navFolder + `/nav_archive_pressed.png" class="img-top"/>
+        <img src="` +
+            navFolder +
+            `/nav_archive.png" />
+        <img src="` +
+            navFolder +
+            `/nav_archive_pressed.png" class="img-top"/>
     </div></a>`
     );
 
@@ -179,14 +205,19 @@ function writeNav(imageToggle) {
 
 //KEYBOARD NAVIGATION
 function keyNav() {
-  document.addEventListener("keydown", (e) => {
-  if ((e.key == 'ArrowRight' || e.key.toLowerCase() == 'd') && pg < maxpg) { //right arrow or D goes to next page
-    window.location.href = "?pg=" + (pg + 1) + navScrollTo;
-  } else if ((e.key == "ArrowLeft" || e.key.toLowerCase() == "a") && pg > 1) { //left arrow or A goes to previous page
-    window.location.href = "?pg=" + (pg - 1) + navScrollTo;
-  } else if (e.key.toLowerCase() == "w") { //W scrolls up
-    window.scrollBy({ top: -30 });
-  } else if (e.key.toLowerCase() == "s") { //S scrolls down
-    window.scrollBy({ top: 30 });
-  }
-});};
+    document.addEventListener("keydown", (e) => {
+        if ((e.key == "ArrowRight" || e.key.toLowerCase() == "d") && pg < maxpg) {
+            //right arrow or D goes to next page
+            window.location.href = "?pg=" + (pg + 1) + navScrollTo;
+        } else if ((e.key == "ArrowLeft" || e.key.toLowerCase() == "a") && pg > 1) {
+            //left arrow or A goes to previous page
+            window.location.href = "?pg=" + (pg - 1) + navScrollTo;
+        } else if (e.key.toLowerCase() == "w") {
+            //W scrolls up
+            window.scrollBy({ top: -30 });
+        } else if (e.key.toLowerCase() == "s") {
+            //S scrolls down
+            window.scrollBy({ top: 30 });
+        }
+    });
+}

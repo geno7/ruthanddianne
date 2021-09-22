@@ -1,7 +1,7 @@
 //variables
 $color-black: #000;
-$color-highlight: #DA5437;
 $color-white: #fff;
+$color-highlight: $color-white;
 
 $bg-black: url("../img/subpage/bg.png");
 $bg-white: url("../img/subpage/bg_white.png");
@@ -20,8 +20,8 @@ body, div, main, section, article {
   box-sizing: border-box;
 }
 
-html { //smooth scroll
-  scroll-behavior: smooth;
+html { //snap scroll
+  scroll-behavior: auto !important;
 }
 
 /* background image */
@@ -107,12 +107,28 @@ header {
     }
 }
 
+//give items with a "span" class the white bg
+.subPage {
+  span {
+    background-image: $bg-white;
+    }
+  p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: $color-black;
+  }
+}
 /* STYLING FOR SUBPAGES (about, characters, etc) */
 
 /*general*/
 
 .subPage {
-  width: 900px;
+  width: 1000px;
   max-width: 98%;
   background-image: $bg-black;
   background-repeat:repeat;
@@ -122,6 +138,46 @@ header {
   margin-bottom: 10px;
   margin-top: 40px;
   padding: 0px 12px 12px;
+}
+
+.subPageNav {
+  background-image: $bg-black;
+  //background-color: $color-black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-size: 20px;
+  max-width: 100%;
+  .subPageNavItems span {
+    background-image: $bg-white;
+    }
+}
+
+/* ARCHIVE PAGE */
+
+/* style table in which archive is displayed */
+.archiveTable {
+  max-width: 98%;
+}
+
+/* style archive table cells */
+.archiveTable td {
+  padding: 3px;
+  vertical-align: top;
+  text-align: left;
+}
+
+/*style archive thumbnail*/
+.archiveCellThumb {
+  img{
+    max-width: 100%;
+  }
+    width: 500px;
+    max-width: 100px;
+}
+
+/* style table cell in which page title is displayed */
+.archiveCellTitle {
+  max-width: 300px;
 }
 
 #archiveHeader {
@@ -151,6 +207,16 @@ header {
   text-align: center;
 }
 
+/*CHARACTER PAGE*/
+
+.charPage {
+  .charProfile {
+    .charImg img {
+      width: 100%;
+    }
+  }
+}
+
 /* for pictures displayed to the left */
 .leftPic {
   clear: left;
@@ -163,11 +229,6 @@ header {
   clear: right;
   float:left;
   margin-left:20px;
-}
-
-/* specific to Characters */
-.charTable, .charTable td { 
-  width: 100%;
 }
 
 /* link colors */
@@ -237,33 +298,7 @@ a:hover {
   --bs-gutter-x: 0;
 }
 
-/* ARCHIVE PAGE */
 
-/* style table in which archive is displayed */
-.archiveTable {
-  max-width: 98%;
-}
-
-/* style archive table cells */
-.archiveTable td {
-  padding: 3px;
-  vertical-align: top;
-  text-align: left;
-}
-
-/*style archive thumbnail*/
-.archiveCellThumb {
-  img{
-    max-width: 100%;
-  }
-    width: 500px;
-    max-width: 100px;
-}
-
-/* style table cell in which page title is displayed */
-.archiveCellTitle {
-  max-width: 300px;
-}
 
 /* FOOTER */
 footer {
