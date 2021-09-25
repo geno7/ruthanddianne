@@ -112,7 +112,7 @@ header {
   span {
     background-image: $bg-white;
     }
-  p {
+  p, a {
     font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
     font-size: 20px;
@@ -234,6 +234,7 @@ header {
 /* link colors */
 a {
       color: $color-black;
+      transition: 0.15s;
     }
 
 a:hover {
@@ -298,7 +299,16 @@ a:hover {
   --bs-gutter-x: 0;
 }
 
-
+/*style share modal*/
+#shareModal {
+  .modal-content {
+    background: $bg-black;
+  }
+  .btn-close {
+    color: $color-black; 
+    opacity: 1;
+  }
+}
 
 /* FOOTER */
 footer {
@@ -314,6 +324,18 @@ footer {
 
   span {
     background-image: $bg-white;
+  }
+  .geno7Banner {
+    img {
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+      transition: 0.2s;
+      max-width: 100%;
+    }
+    img:hover {
+      -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(0%);
+    }
   }
 }
 

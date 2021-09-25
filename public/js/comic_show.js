@@ -28,9 +28,34 @@ function writePageTitle(toggleNum,char) { //display title of current page
 
 function writeAuthorNotes() { //display author notes
   return document.write(`
-    <h2><span>` + pgData[pg - 1].title.toUpperCase() +`</span></h2>
+    <div class="row">
+        <h2><span>` + pgData[pg - 1].title.toUpperCase() +`</span></h2>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#shareModal">
+        Launch demo modal
+        </button>
+    </div>
     <h4><span>` + pgData[pg - 1].date +`</span></h4>
     <span>` + pgData[pg - 1].authorNotes + `</span>
+    `);
+}
+
+function writeShareModal() {
+
+return document.write(`    
+<!-- Modal -->
+    <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel"><span>SHARE THIS COMIC</span></h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            
+            </div>
+        </div>
+        </div>
+    </div>
     `);
 }
 

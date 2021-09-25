@@ -50,7 +50,7 @@ const pgData = [
         date: "Apr 16, 2020", //the date on which the page was posted (mainly for the archive)
         altText: "", //the alt text (mouse over text) for this particular comic. put nothing inbetween the quotes for no alt text
         imageFiles: 3, //how many image files this page is split into
-        authorNotes: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis enim ut lacus viverra, nec egestas libero cursus. Aliquam blandit diam ante, at gravida augue porta a. Etiam fringilla leo vitae elit viverra fringilla. Mauris vehicula, erat cursus volutpat fringilla, neque urna sodales massa, viverra luctus ante erat ut nisi. Duis ultricies arcu mattis finibus congue. Maecenas interdum, tellus in eleifend pellentesque, leo velit euismod enim, pretium faucibus velit ante ut dui. Fusce sed nulla dapibus eros tristique efficitur a vitae magna. Donec dignissim dolor eget auctor facilisis. Duis aliquam est lacinia convallis tempor. Integer nec erat egestas, eleifend tortor at, sodales sapien. Nulla facilisi. Aliquam et ligula nec mi egestas aliquet. Donec sed finibus risus. Donec ullamcorper luctus nisl pretium suscipit. Sed ipsum velit, posuere ac euismod vel, faucibus quis ante. Pellentesque commodo lobortis diam ac fringilla.`,
+        authorNotes: `Sorry this is completely unreadable on mobile, this was before I knew what size to make text.`,
     },
     {
         pgNum: 2,
@@ -58,7 +58,7 @@ const pgData = [
         date: "Apr 16, 2020",
         altText: "",
         imageFiles: 1,
-        authorNotes: ``,
+        authorNotes: `The Aoi Honoo influence starts to peek through`,
     },
     {
         pgNum: 3,
@@ -66,7 +66,7 @@ const pgData = [
         date: "Mar 18, 2020",
         altText: "",
         imageFiles: 2,
-        authorNotes: ``,
+        authorNotes: `Thank god they didn't go with Atomic Shrine Maiden`,
     },
     {
         pgNum: 4,
@@ -74,7 +74,7 @@ const pgData = [
         date: "May 4, 2020",
         altText: "",
         imageFiles: 2,
-        authorNotes: ``,
+        authorNotes: `Episode 1 of "awkwardly trying to convince people I'm not ableist and Reatards is just a real band that I like"`,
     },
     {
         pgNum: 5,
@@ -82,7 +82,7 @@ const pgData = [
         date: "May 11, 2020",
         altText: "",
         imageFiles: 1,
-        authorNotes: ``,
+        authorNotes: `Is it starting to become obvious how much of a self insert Dianne is yet`,
     },
     {
         pgNum: 6,
@@ -90,7 +90,7 @@ const pgData = [
         date: "May 18, 2020",
         altText: "",
         imageFiles: 1,
-        authorNotes: ``,
+        authorNotes: `My friend Ben helped me out with that third panel`,
     },
     {
         pgNum: 7,
@@ -98,7 +98,7 @@ const pgData = [
         date: "May 25, 2020",
         altText: "",
         imageFiles: 2,
-        authorNotes: ``,
+        authorNotes: `Doot doola doot doo ...`,
     },
     {
         pgNum: 8,
@@ -106,7 +106,7 @@ const pgData = [
         date: "May 25, 2020",
         altText: "",
         imageFiles: 2,
-        authorNotes: ``,
+        authorNotes: `caricatures are hard`,
     },
     {
         pgNum: 9,
@@ -114,7 +114,7 @@ const pgData = [
         date: "Jun 8, 2020",
         altText: "",
         imageFiles: 1,
-        authorNotes: ``,
+        authorNotes: `Id like to think Pharrell's hat continues offscreen infinitely like Doug Dimmadome`,
     },
     {
         pgNum: 10,
@@ -122,7 +122,7 @@ const pgData = [
         date: "Jun 15, 2020",
         altText: "",
         imageFiles: 2,
-        authorNotes: ``,
+        authorNotes: `Better than the Hot Ones dream`,
     },
     {
         pgNum: 11,
@@ -130,7 +130,7 @@ const pgData = [
         date: "Jun 22, 2020",
         altText: "",
         imageFiles: 2,
-        authorNotes: ``,
+        authorNotes: `Chuck`,
     },
     {
         pgNum: 12,
@@ -138,7 +138,7 @@ const pgData = [
         date: "Jun 29, 2020",
         altText: "",
         imageFiles: 1,
-        authorNotes: ``,
+        authorNotes: `Up until this strip I was actually doing the comic in MediBang Paint, this is the first one where I switched to Clip Studio`,
     },
     {
         pgNum: 13,
@@ -146,7 +146,7 @@ const pgData = [
         date: "Jul 13, 2020",
         altText: "",
         imageFiles: 2,
-        authorNotes: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis enim ut lacus viverra, nec egestas libero cursus. Aliquam blandit diam ante, at gravida augue porta a. Etiam fringilla leo vitae elit viverra fringilla. Mauris vehicula, erat cursus volutpat fringilla, neque urna sodales massa, viverra luctus ante erat ut nisi. Duis ultricies arcu mattis finibus congue. Maecenas interdum, tellus in eleifend pellentesque, leo velit euismod enim, pretium faucibus velit ante ut dui. Fusce sed nulla dapibus eros tristique efficitur a vitae magna. Donec dignissim dolor eget auctor facilisis. Duis aliquam est lacinia convallis tempor. Integer nec erat egestas, eleifend tortor at, sodales sapien. Nulla facilisi. Aliquam et ligula nec mi egestas aliquet. Donec sed finibus risus. Donec ullamcorper luctus nisl pretium suscipit. Sed ipsum velit, posuere ac euismod vel, faucibus quis ante. Pellentesque commodo lobortis diam ac fringilla.`,
+        authorNotes: `The whole tone scale is like a cheat code to make me like a song at least a little bit and I kind of hate that`,
     },
     {
         pgNum: 14,
@@ -154,7 +154,7 @@ const pgData = [
         date: "Jul 20, 2020",
         altText: "",
         imageFiles: 1,
-        authorNotes: ``,
+        authorNotes: `good friends`,
     },
     {
         pgNum: 15,
@@ -162,7 +162,7 @@ const pgData = [
         date: "Aug 11, 2020",
         altText: "",
         imageFiles: 3,
-        authorNotes: ``,
+        authorNotes: `And all the beauty tells him he is WORMS HERO</br>He is love and hatred`,
     },
     {
         pgNum: 16,
@@ -170,7 +170,7 @@ const pgData = [
         date: "Apr 26, 2021",
         altText: "",
         imageFiles: 3,
-        authorNotes: ``,
+        authorNotes: `And all the beautiful thoughts they'll have collected over many long years vanished, and probably won't ever come back.`,
     },
     {
         pgNum: 17,
@@ -178,7 +178,9 @@ const pgData = [
         date: "May 3, 2021",
         altText: "",
         imageFiles: 2,
-        authorNotes: ``,
+        authorNotes: `Oh my! We sang with strength to carry on</br>
+        Encouraged him to sing along</br>
+        We sang of all the world and praised him HOORAY!`,
     },
 ];
 

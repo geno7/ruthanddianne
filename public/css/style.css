@@ -67,7 +67,7 @@ header {
 .subPage span {
   background-image: url("../img/subpage/bg_white.png"); }
 
-.subPage p {
+.subPage p, .subPage a {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
   font-size: 20px; }
@@ -160,7 +160,8 @@ header {
 
 /* link colors */
 a {
-  color: #000; }
+  color: #000;
+  transition: 0.15s; }
 
 a:hover {
   color: #fff; }
@@ -200,6 +201,14 @@ a:hover {
   padding-top: 0px;
   --bs-gutter-x: 0; }
 
+/*style share modal*/
+#shareModal .modal-content {
+  background: url("../img/subpage/bg.png"); }
+
+#shareModal .btn-close {
+  color: #000;
+  opacity: 1; }
+
 /* FOOTER */
 footer {
   color: #000;
@@ -211,6 +220,16 @@ footer {
   font-size: small; }
   footer span {
     background-image: url("../img/subpage/bg_white.png"); }
+  footer .geno7Banner img {
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    transition: 0.2s;
+    max-width: 100%; }
+  footer .geno7Banner img:hover {
+    -webkit-filter: grayscale(0%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%); }
 
 footer p {
   margin: auto; }
