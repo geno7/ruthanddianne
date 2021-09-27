@@ -4,13 +4,16 @@
     "description": "homepage for ruth and dianne webcomic",
     "main": "index.js",
     "scripts": {
+        "build": "parcel build public/index.html public/archive.html public/characters.html",
+        "dev": "parcel public/index.html public/archive.html public/characters.html",
+        "clean": "rimraf dist",
         "lite": "lite-server",
+        "imagemin": "imagemin public/img/* -o dist/img && imagemin public/img/thumbs/* -o dist/img/thumbs && imagemin public/img/comicnav/* -o dist/img/comicnav && imagemin public/img/comics/* -o dist/img/comics && imagemin public/img/header/* -o dist/img/header && imagemin public/img/subpage/* -o dist/img/subpage",
         "scss": "node-sass -o ./public/css/ ./public/css/",
         "start": "npm run watch:all",
         "test": "echo \"Error: no test specified\" && exit 1",
         "watch:scss": "onchange \"./public/css/*.scss\" -- npm run scss",
-        "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
-        "build": ""
+        "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
     },
     "repository": {
         "type": "git",
@@ -23,14 +26,23 @@
     },
     "homepage": "https://github.com/geno7/ruthanddianne#readme",
     "devDependencies": {
+        "css-loader": "^6.3.0",
+        "imagemin-cli": "^5.1.0",
         "lite-server": "^2.6.1",
         "node-sass": "^6.0.1",
-        "parallelshell": "^3.0.1"
+        "onchange": "^7.1.0",
+        "parallelshell": "^3.0.1",
+        "parcel-bundler": "^1.12.5",
+        "rimraf": "^3.0.2",
+        "style-loader": "^3.3.0",
+        "url-loader": "^4.1.1",
+        "webpack": "^5.54.0",
+        "webpack-cli": "^4.8.0"
     },
     "dependencies": {
         "bootstrap": "^5.1.0",
+        "imagemin-keep-folder": "^5.3.2",
         "jquery": "^3.6.0",
-        "onchange": "^7.1.0",
         "popper.js": "^1.16.1"
     }
 }

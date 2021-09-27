@@ -3,16 +3,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Ruth & Dianne are Starting a Band</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- icon -->
+    <link rel="icon" href="img/icon.png">
 
-    <!-- additional css -->
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
-
-    <!-- link to the settings script. rly important to have this called before comic_show and comic_archive, contains crucial variables -->
-    <script src="js/comic_settings.js"></script>
-    <!-- link to the script that controls the displaying of your comic, as well as the navigation. -->
-    <script src="js/comic_show.js"></script>
+    <!-- endbuild -->
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,43 +18,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
   </head>
   <body>
+
   <!-- header logo -->
-  <script src="js/comic_header.js"></script>
+  <div class="writeHeader"></div>
 
   <div class="container-fluid">
     <!-- div that has floating navigation -->
-    <div id="topNav" class="row sticky-top pb-4 pt-0 px-0 d-flex justify-content-center">
-      <script>
-        writeNav(true); //show navigation at the top of the comic. to toggle either images or text for nav, set this to true or false.
-        keyNav(); //enables navigation through the comic with the arrow keys and WSAD. delete or comment out (add // at the beginning) to disable
-      </script>
-      <script src="js/nav_shrinker.js"></script>
+    <div id="topNav" class="writeNav row sticky-top pb-4 pt-0 px-0 d-flex justify-content-center">
     </div>
     <!-- div that shows comics -->
     <div id="showComic">
     <div class="row d-flex justify-content-center text-center">
       <!-- make sure that if you want to turn on automatically scrolling to the top of the comic when you load a new page, keep the id of this div and the variable "navScrollTo" in showcomic.js the same-->
           <div id="comicPages" class="col-sm-7 mb-5">
-              <script>
-                writePageClickable(true); //show the current page. to toggle whether pages can be clicked to move to the next one, set this to true or false.
-              </script>
+              <div class="writePageClickable"></div>
           </div>
       </div>
     </div>
     <div class="row d-flex justify-content-center">
         <div id="authorNotes" class="col-sm-7 lh-1">
           <!-- write author notes and share modal-->
-          <script>
-          writeAuthorNotes()
-          writeShareModal()
-          </script>
+          <div class="writeAuthorNotes"></div>
+          <div class="writeShareModal"></div>
       </div>
     </div>
   </div>
 
-  <!-- popper bundle-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
   <!-- footer that has a link back to neocities, and ideally copyright info and stuff. don't forget to put this on every page-->
-    <script src="js/comic_footer.js"></script>
+    <div class="writeFooter"></div>
+  
+  <!-- addthis -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-614f86e21d933844"></script>
+
+  <!-- build:js js/main.js -->
+    <script src="../node_modules/jquery/dist/jquery.slim.min.js" defer></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js" defer></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js" defer></script>
+    <script src="js/comic_settings.js" defer></script>
+    <script src="js/comic_show.js" defer></script>
+    <script src="js/comic_header.js" defer></script>
+    <script src="js/nav_shrinker.js" defer></script>
+    <script src="js/comic_footer.js" defer></script>
+    <!-- endbuild -->
+  </body>
 </html>

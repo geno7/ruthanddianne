@@ -1,6 +1,6 @@
 //the header of the site would be handled in this javascript file, so you don't have to copypaste it onto every page.
 //There are much better methods of handling the header out there but you can stick with this one if you want
-document.write(`
+document.querySelector(".writeHeader").innerHTML = `
     <header align="center position-absolute">
         <div class="container-fluid">
             <div class="row d-flex justify-content-center text-center" id="headerLogo">
@@ -26,4 +26,4 @@ document.write(`
             <div>
         </div>
     </header>
-`);
+`;

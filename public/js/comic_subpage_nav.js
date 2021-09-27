@@ -1,5 +1,5 @@
-document.write(`
-<div class="subPageNav sticky-top pb-2 pt-2 px-0 d-flex justify-content-center">
+function writeSubpageNav() {
+document.querySelector(".subPageNav").innerHTML = `
             <div class="subPageNavItems text-center">
                 <span>
                     | <a href="index.html">COMICS</a> |
@@ -7,6 +7,7 @@ document.write(`
                     <a href="archive.html">ARCHIVE</a> |
                     
                 </span>
-            </div>
-    </div>
-`);
+            </div>`;
+}
+
+writeSubpageNav();

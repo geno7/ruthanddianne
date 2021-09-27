@@ -311,10 +311,11 @@ a:hover {
 }
 
 /* FOOTER */
-footer {
+.writeFooter {
   color: $color-black;
-  margin-top: 12px;
-  margin-bottom: 15px;
+  background: $bg-black;
+  margin-top: 22px;
+  padding-bottom: 15px;
   float: left;
   width: 100%;
 
@@ -383,6 +384,6 @@ html, body {
   img:hover {
   -webkit-transform: scale(1.01);
   transform: scale(1.05);
-  cursor: inherit;
+  cursor: pointer;
   }
 }

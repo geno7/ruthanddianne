@@ -210,23 +210,24 @@ a:hover {
   opacity: 1; }
 
 /* FOOTER */
-footer {
+.writeFooter {
   color: #000;
-  margin-top: 12px;
-  margin-bottom: 15px;
+  background: url("../img/subpage/bg.png");
+  margin-top: 22px;
+  padding-bottom: 15px;
   float: left;
   width: 100%;
   font-family: 'Courier New', Courier, monospace;
   font-size: small; }
-  footer span {
+  .writeFooter span {
     background-image: url("../img/subpage/bg_white.png"); }
-  footer .geno7Banner img {
+  .writeFooter .geno7Banner img {
     -webkit-filter: grayscale(100%);
     /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
     transition: 0.2s;
     max-width: 100%; }
-  footer .geno7Banner img:hover {
+  .writeFooter .geno7Banner img:hover {
     -webkit-filter: grayscale(0%);
     /* Safari 6.0 - 9.0 */
     filter: grayscale(0%); }
@@ -263,4 +264,4 @@ html, body {
 .imglink img:hover {
   -webkit-transform: scale(1.01);
   transform: scale(1.05);
-  cursor: inherit; }
+  cursor: pointer; }

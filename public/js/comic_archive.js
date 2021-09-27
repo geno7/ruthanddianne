@@ -1,6 +1,14 @@
 //comic_archive.js was created by geno7
 
-//again, this is stuff you don't really need to pay attention to if you're not super familiar with JS 
+//for writing archives
+writeArchive("2021", 16, maxpg, 0, true);
+writeArchive(
+    "2020", //name of the div inside which the function is being called
+    1, //earliest page to list
+    15, //latest page to list. setting to maxpg will make it automatically update with the latest page
+    0, //if set to 0, list is displayed "latest first". if set to -1, list is displayed chronologically
+    true //whether to use thumbnails or not
+);
 
 function writeArchive(divId,min,max,reverseOrder,useThumbs) {
     //create a table to put the archive data
@@ -55,5 +63,4 @@ function writeArchive(divId,min,max,reverseOrder,useThumbs) {
         cellDate.setAttribute("class", "archiveCellDate lh-1 py-2 text-end align-middle");
         console.log(i + `created row - ${pgTitle} - ${linkToComic}`);
     };
-
 }
