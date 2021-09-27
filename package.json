@@ -4,7 +4,7 @@
     "description": "homepage for ruth and dianne webcomic",
     "main": "index.js",
     "scripts": {
-        "build": "parcel build public/index.html public/archive.html public/characters.html",
+        "build": "",
         "dev": "parcel public/index.html public/archive.html public/characters.html",
         "clean": "rimraf dist",
         "lite": "lite-server",
