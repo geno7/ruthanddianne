@@ -98,7 +98,7 @@ header {
 }
 
 //paragraph font
-.archiveTable, #authorNotes {
+.archiveTable, #authorNotes, .btn, .modal-content {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
   font-size: 20px;
@@ -301,14 +301,34 @@ a:hover {
   max-width: 900px;
 }
 
-/*style share modal*/
-#shareModal {
+/*style modal*/
+#shareModal, #contentWarningModal {
   .modal-content {
     background: $bg-black;
   }
   .btn-close {
     color: $color-black; 
     opacity: 1;
+  }
+  span {
+    background-image: $bg-white;
+    }
+  .modal-header {
+    border-bottom: 0 none;
+  }
+
+  .modal-footer {
+      border-top: 0 none;
+  }
+
+  .btn-light {
+    background: $bg-white;
+    transition: 0.2s;
+    border: 0px;
+  }
+  .btn-light:hover {
+    background: $bg-black;
+    color: $color-white
   }
 }
 

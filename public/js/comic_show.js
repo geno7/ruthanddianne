@@ -41,8 +41,8 @@ function writeAuthorNotes() {
             <h2><span>` +
             pgData[pg - 1].title.toUpperCase() +
             `</span></h2>
-            <a data-bs-toggle="modal" data-bs-target="#shareModal"  class="imglink">
-            <img src="img/share.png" alt="share this comic" width="100">
+            <!--<a data-bs-toggle="modal" data-bs-target="#shareModal"  class="imglink">
+            <img src="img/share.png" alt="share this comic" width="100">-->
             </a>
         </div>
     </div>

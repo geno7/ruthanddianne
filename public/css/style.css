@@ -57,11 +57,11 @@ header {
   font-weight: 700;
   color: #000; }
 
-.archiveTable, #authorNotes {
+.archiveTable, #authorNotes, .btn, .modal-content {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
   font-size: 20px; }
-  .archiveTable span, #authorNotes span {
+  .archiveTable span, #authorNotes span, .btn span, .modal-content span {
     background-image: url("../img/subpage/bg_white.png"); }
 
 .subPage span {
@@ -203,13 +203,31 @@ a:hover {
   --bs-gutter-x: 0;
   max-width: 900px; }
 
-/*style share modal*/
-#shareModal .modal-content {
+/*style modal*/
+#shareModal .modal-content, #contentWarningModal .modal-content {
   background: url("../img/subpage/bg.png"); }
 
-#shareModal .btn-close {
+#shareModal .btn-close, #contentWarningModal .btn-close {
   color: #000;
   opacity: 1; }
+
+#shareModal span, #contentWarningModal span {
+  background-image: url("../img/subpage/bg_white.png"); }
+
+#shareModal .modal-header, #contentWarningModal .modal-header {
+  border-bottom: 0 none; }
+
+#shareModal .modal-footer, #contentWarningModal .modal-footer {
+  border-top: 0 none; }
+
+#shareModal .btn-light, #contentWarningModal .btn-light {
+  background: url("../img/subpage/bg_white.png");
+  transition: 0.2s;
+  border: 0px; }
+
+#shareModal .btn-light:hover, #contentWarningModal .btn-light:hover {
+  background: url("../img/subpage/bg.png");
+  color: #fff; }
 
 /* FOOTER */
 .writeFooter {
