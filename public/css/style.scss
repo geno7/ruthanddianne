@@ -1,7 +1,8 @@
 //variables
 $color-black: #000;
 $color-white: #fff;
-$color-highlight: $color-white;
+$color-highlight: #B5B5B5;
+$color-black-bg: #0A0A0A;
 
 $bg-black: url("../img/subpage/bg.png");
 $bg-white: url("../img/subpage/bg_white.png");
@@ -303,16 +304,17 @@ a:hover {
 
 /*style modal*/
 #shareModal, #contentWarningModal {
-  .modal-content {
-    background: $bg-black;
+  .modal-content { //no bg images so it loads faster
+    background: $color-black-bg;
+    span { 
+    background: $color-highlight;
+    }
   }
   .btn-close {
-    color: $color-black; 
+    color: $color-black-bg; 
     opacity: 1;
   }
-  span {
-    background-image: $bg-white;
-    }
+  
   .modal-header {
     border-bottom: 0 none;
   }
@@ -322,12 +324,12 @@ a:hover {
   }
 
   .btn-light {
-    background: $bg-white;
+    background: $color-highlight;
     transition: 0.2s;
     border: 0px;
   }
   .btn-light:hover {
-    background: $bg-black;
+    background: $color-black-bg;
     color: $color-white
   }
 }

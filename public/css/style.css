@@ -164,7 +164,7 @@ a {
   transition: 0.15s; }
 
 a:hover {
-  color: #fff; }
+  color: #B5B5B5; }
 
 /* HOMEPAGE */
 /* style nav button images */
@@ -205,14 +205,13 @@ a:hover {
 
 /*style modal*/
 #shareModal .modal-content, #contentWarningModal .modal-content {
-  background: url("../img/subpage/bg.png"); }
+  background: #0A0A0A; }
+  #shareModal .modal-content span, #contentWarningModal .modal-content span {
+    background: #B5B5B5; }
 
 #shareModal .btn-close, #contentWarningModal .btn-close {
-  color: #000;
+  color: #0A0A0A;
   opacity: 1; }
-
-#shareModal span, #contentWarningModal span {
-  background-image: url("../img/subpage/bg_white.png"); }
 
 #shareModal .modal-header, #contentWarningModal .modal-header {
   border-bottom: 0 none; }
@@ -221,12 +220,12 @@ a:hover {
   border-top: 0 none; }
 
 #shareModal .btn-light, #contentWarningModal .btn-light {
-  background: url("../img/subpage/bg_white.png");
+  background: #B5B5B5;
   transition: 0.2s;
   border: 0px; }
 
 #shareModal .btn-light:hover, #contentWarningModal .btn-light:hover {
-  background: url("../img/subpage/bg.png");
+  background: #0A0A0A;
   color: #fff; }
 
 /* FOOTER */
