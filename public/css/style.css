@@ -4,6 +4,24 @@ body, div, main, section, article {
 html {
   scroll-behavior: auto !important; }
 
+/*FONTS*/
+@font-face {
+  font-family: EckScript;
+  src: url(../fnt/Eckscript4-Regular.ttf) format("truetype"); }
+
+/* header font */
+#showComic, header, h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #000; }
+
+.archiveTable, #authorNotes, .btn, .modal-content {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-size: 20px; }
+  .archiveTable span, #authorNotes span, .btn span, .modal-content span {
+    background-image: url("../img/subpage/bg_white.png"); }
+
 /* background image */
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg.png");
@@ -45,24 +63,6 @@ header {
   content: "";
   clear: both;
   display: table; }
-
-/*FONTS*/
-@font-face {
-  font-family: EckScript;
-  src: url(../fnt/Eckscript4-Regular.ttf) format("truetype"); }
-
-/* header font */
-#showComic, header, h1, h2, h3, h4, h5 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #000; }
-
-.archiveTable, #authorNotes, .btn, .modal-content {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 600;
-  font-size: 20px; }
-  .archiveTable span, #authorNotes span, .btn span, .modal-content span {
-    background-image: url("../img/subpage/bg_white.png"); }
 
 .subPage span {
   background-image: url("../img/subpage/bg_white.png"); }
