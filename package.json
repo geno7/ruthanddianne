@@ -9,6 +9,7 @@
         "clean": "rimraf dist",
         "lite": "lite-server",
         "imagemin": "imagemin public/img/* -o dist/img && imagemin public/img/thumbs/* -o dist/img/thumbs && imagemin public/img/comicnav/* -o dist/img/comicnav && imagemin public/img/comics/* -o dist/img/comics && imagemin public/img/header/* -o dist/img/header && imagemin public/img/subpage/* -o dist/img/subpage",
+        "tinypng": "tinypng public/img",
         "scss": "node-sass -o ./public/css/ ./public/css/",
         "start": "npm run watch:all",
         "test": "echo \"Error: no test specified\" && exit 1",
