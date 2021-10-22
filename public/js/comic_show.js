@@ -1,6 +1,6 @@
 //comic_show.js was created by geno7, with much needed assistance from Dannarchy
 
-//this is the script that actually displays the comics, nav and comic title on the page.
+//this is the script that controls displaying a page of your comic, comic page navigation, and author notes on your page.
 
 //to show where to display everything on the page, put a div with the class of the function name, and call the function here
     writeNav(true); //true/false toggles image or text
