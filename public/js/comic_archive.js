@@ -1,7 +1,8 @@
 //comic_archive.js was created by geno7
 
 //for writing archives
-writeArchive("2021", 16, maxpg, 0, true);
+writeArchive("2022", maxpg, maxpg, 0, true);
+writeArchive("2021", 16, 17, 0, true);
 writeArchive(
     "2020", //name of the div inside which the function is being called
     1, //earliest page to list
