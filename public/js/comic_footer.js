@@ -11,7 +11,8 @@ function writeFooter() {
                     </div>
                     <div class="col-12 mb-2">
                         <h5 class="mb-0"><span>POWERED BY</span></h5>
-                        <a href="https://rarebit.neocities.org" class="imglink"><img src="img/rarebitlogo_small.png" height = "30"/></a>
+                        <p><a href="https://rarebit.neocities.org" class="imglink"><img src="img/rarebitlogo_small.png" height = "30"/></a></p>
+                        <a href="https://neocities.org/site/ruthanddianne" class=" geno7Banner imglink"><img src="img/neocities_button.gif" height = "30"/></a>
                     </div>
                 </div>
             </div>
