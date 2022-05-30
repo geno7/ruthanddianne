@@ -9,7 +9,7 @@ let pg = Number(findGetParameter("pg")); //make "pg" mean the current page numbe
 ////////////////////////
 
 //REALLY IMPORTANT ONES
-const maxpg = 19; //the current number of pages your comic has in total. this DOESNT necessarily mean number of IMAGE FILES as it doesn't count pages split into multiple files. 
+const maxpg = 20; //the current number of pages your comic has in total. this DOESNT necessarily mean number of IMAGE FILES as it doesn't count pages split into multiple files. 
 //MUST UPDATE NUMBER MANUALLY EVERY TIME YOU ADD A NEW PAGE or else it wont display the most recent page
 
 // COMIC PAGE SETTINGS
@@ -197,6 +197,14 @@ const pgData = [
         altText: "",
         imageFiles: 1,
         authorNotes: `the start of a three part saga`,
+    },
+        {
+        pgNum: 20,
+        title: "Being Parodied By Weird Al (PART 2)",
+        date: "May 24, 2022",
+        altText: "",
+        imageFiles: 1,
+        authorNotes: `known for nothing if not his resilience and ever-positive attitude, Weird Al shrugged and set to searching up the phone number for Pizza Lads Records, hoping he could at least mine some comedy out of his second choice for a parody, the Slice-To-Meet-Yous' hit summer single "You're a Pizza Crap"`,
     },
 ];
 
