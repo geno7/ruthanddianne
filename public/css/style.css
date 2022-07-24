@@ -250,6 +250,18 @@ a:hover {
     -webkit-filter: grayscale(0%);
     /* Safari 6.0 - 9.0 */
     filter: grayscale(0%); }
+  .footerStyle #webcomicwebring {
+    background: url("../img/subpage/bg_white.png"); }
+    .footerStyle #webcomicwebring img {
+      -webkit-filter: grayscale(100%);
+      /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+      transition: 0.2s;
+      max-width: 100%; }
+    .footerStyle #webcomicwebring img:hover {
+      -webkit-filter: grayscale(0%);
+      /* Safari 6.0 - 9.0 */
+      filter: grayscale(0%); }
 
 footer p {
   margin: auto; }
