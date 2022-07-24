@@ -164,7 +164,7 @@ a {
   transition: 0.15s; }
 
 a:hover {
-  color: #B5B5B5; }
+  color: #fff; }
 
 /* HOMEPAGE */
 /* style nav button images */
@@ -207,7 +207,7 @@ a:hover {
 #shareModal .modal-content, #contentWarningModal .modal-content {
   background: #0A0A0A; }
   #shareModal .modal-content span, #contentWarningModal .modal-content span {
-    background: #B5B5B5; }
+    background: #fff; }
 
 #shareModal .btn-close, #contentWarningModal .btn-close {
   color: #0A0A0A;
@@ -220,7 +220,7 @@ a:hover {
   border-top: 0 none; }
 
 #shareModal .btn-light, #contentWarningModal .btn-light {
-  background: #B5B5B5;
+  background: #fff;
   transition: 0.2s;
   border: 0px; }
 
