@@ -229,7 +229,7 @@ a:hover {
   color: #fff; }
 
 /* FOOTER */
-.writeFooter {
+.footerStyle {
   color: #000;
   background: url("../img/subpage/bg.png");
   margin-top: 22px;
@@ -238,15 +238,15 @@ a:hover {
   width: 100%;
   font-family: 'Courier New', Courier, monospace;
   font-size: small; }
-  .writeFooter span {
+  .footerStyle span {
     background-image: url("../img/subpage/bg_white.png"); }
-  .writeFooter .geno7Banner img {
+  .footerStyle .geno7Banner img {
     -webkit-filter: grayscale(100%);
     /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
     transition: 0.2s;
     max-width: 100%; }
-  .writeFooter .geno7Banner img:hover {
+  .footerStyle .geno7Banner img:hover {
     -webkit-filter: grayscale(0%);
     /* Safari 6.0 - 9.0 */
     filter: grayscale(0%); }
