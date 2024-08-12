@@ -9,7 +9,7 @@ let pg = Number(findGetParameter("pg")); //make "pg" mean the current page numbe
 ////////////////////////
 
 //REALLY IMPORTANT ONES
-const maxpg = 21; //the current number of pages your comic has in total. this DOESNT necessarily mean number of IMAGE FILES as it doesn't count pages split into multiple files. 
+const maxpg = 24; //the current number of pages your comic has in total. this DOESNT necessarily mean number of IMAGE FILES as it doesn't count pages split into multiple files. 
 //MUST UPDATE NUMBER MANUALLY EVERY TIME YOU ADD A NEW PAGE or else it wont display the most recent page
 
 // COMIC PAGE SETTINGS
@@ -213,6 +213,30 @@ const pgData = [
         altText: "",
         imageFiles: 1,
         authorNotes: `Why would Dianne pull an axe on someone? Is she crazy? Well, rest assured - she only did it because she left her ballistic missile launcher in her other pants`,
+    },
+    {
+        pgNum: 22,
+        title: "Vs. Doug Walker (PART 1)",
+        date: "August 12, 2024",
+        altText: "",
+        imageFiles: 1,
+        authorNotes: `Surprise! I feel like drawing again! I cannot believe I wrote this an entire year ago. Thankfully it's still relevant enough to release. Does this mean regular updates again? I have no idea! We'll see!`,
+    },
+    {
+        pgNum: 23,
+        title: "Vs. Doug Walker (PART 2)",
+        date: "August 12, 2024",
+        altText: "",
+        imageFiles: 1,
+        authorNotes: `Why 12 Angry Men? Because he likes to go two steps beyond.`,
+    },
+    {
+        pgNum: 24,
+        title: "Vs. Doug Walker (PART 3)",
+        date: "August 12, 2024",
+        altText: "",
+        imageFiles: 1,
+        authorNotes: `The criminal justice system is but one giant Big-Lipped Alligator Moment.`,
     },
 ];
 
